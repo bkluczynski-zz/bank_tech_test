@@ -22,6 +22,18 @@ attr_reader :balance, :history_logger
   @history_logger.add_transaction(Transaction.new(debit: amount, balance: @balance ))
   end
 
+  def print_header
+    puts "date || credit || debit || balance"
+  end
+
+  def print_statement
+    print_header
+    @history_logger.transactions.reverse.each do |transaction|
+    p "#{transaction.date.to_s} || #{transaction.credit.to_s} || #{transaction.debit.to_s} ||  #{transaction.balance.to_s}"
+    end
+  end
+
+
 
   private
 
