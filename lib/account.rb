@@ -17,15 +17,9 @@ def withdraw(amount)
 @transactions << {type: "debit", amount: amount, date: Time.now.strftime("%d/%m/%Y"), balance: @balance}
 end
 
-def print_headers
-  puts "data || credit || debit || balance"
-end
-
 def print_statement
   print_headers
-  s = ""
-  s1 = ""
-@transactions.reverse.each do |transaction|
+  @transactions.reverse.each do |transaction|
   if transaction[:type] == 'debit'
     p transaction[:date].to_s + " ||    || " + transaction[:amount].to_s + " || " + transaction[:balance].to_s
   else
@@ -34,6 +28,12 @@ def print_statement
 
 end
   p "You have no more transaction to show"
+end
+
+private
+
+def print_headers
+  puts "data || credit || debit || balance"
 end
 
 end
