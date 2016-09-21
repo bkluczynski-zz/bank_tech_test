@@ -34,7 +34,6 @@ attr_reader :balance, :history_logger
   end
 
 
-
   private
 
 
