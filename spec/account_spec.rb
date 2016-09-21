@@ -5,6 +5,7 @@ require 'account'
       it { is_expected.to respond_to(:deposit).with(1).argument }
       it { is_expected.to respond_to(:withdraw).with(1).argument }
 
+
         describe 'operations on the bank account' do
           context 'deposit' do
             it 'increases the balance by the amount of deposit' do

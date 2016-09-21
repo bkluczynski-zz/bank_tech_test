@@ -5,7 +5,6 @@ attr_reader :balance
 
 def initialize
 @balance = 0
-
 end
 
 
@@ -19,8 +18,6 @@ positive_integer(amount)
 fail 'Not enough funds to proceed with operation' if @balance - amount < 0
 @balance -= amount
 end
-
-
 
 
 private
