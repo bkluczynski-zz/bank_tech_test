@@ -15,8 +15,6 @@ describe Statement do
       expect(subject.print_statement(history_logs)).to eq "date || credit || debit || balance\n09/21/16 ||  || 100 || 900\n09/21/16 || 1000 ||  || 1000\n"
     end
 
-
-
 end
 
 end

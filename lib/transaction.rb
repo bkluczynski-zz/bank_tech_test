@@ -9,6 +9,4 @@ attr_reader :credit, :debit, :balance, :date
     @date = Time.new.strftime("%m/%d/%y")
   end
 
-
-
 end
